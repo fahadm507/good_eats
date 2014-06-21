@@ -1,0 +1,12 @@
+
+li {
+  list-style-type: none;
+}
+.list > ul li {
+  text-align:left;
+}
+.btn {
+  margin-top:10px;
+}
+
+

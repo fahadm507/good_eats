@@ -1,0 +1,20 @@
+
+<a class="btn" href="/restaurants">Back to Restaurants </a>
+<h3><a href=""><%= @restaurant.name %></a></h3>
+<div class="restaurant-details">
+  <ul>
+    <li>Address:<%= @restaurant.address %></li>
+    <li>City:  <%= @restaurant.city %></li>
+    <li>Zip Code: <%= @restaurant.zip_code %></li>
+    <li>Category: <%= @restaurant.category %></li>
+    <li>Description: <%= @restaurant.description%>
+  </ul>
+
+  <h3>Reviews</h3>
+    <% @restaurant.reviews.each do |review| %>
+      <p><%= review.rating %></p>
+      <p><%= review.body %><p>
+    <%end%>
+</div>
+
+
