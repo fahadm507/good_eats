@@ -1,9 +1,9 @@
 
 <div class="restaurant-list">
-  <a class="btn" href="/restaurants/new">Create A New Restaurants</a>
-  <h2> List of all Restaurants</h2>
+  <a class="btn" href="/restaurants/new">Add A New Restaurants</a>
+  <h2> Recently added Restaurants</h2>
   <ul class="list">
-    <% @restaurants.each do |rest| %>
+    <% @restaurants.limit(10).each do |rest| %>
       <li class="list-group-item"><a href="/restaurants/<%= rest.id %>"><%= rest.name %></a</a>
     <%end%>
   </ul>
